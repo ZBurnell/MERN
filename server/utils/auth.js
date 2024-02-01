@@ -28,8 +28,9 @@ module.exports = {
     }
 
     // send to next endpoint
-    next();
+    return req;
   },
+  
   signToken: function ({ username, email, _id }) {
     const payload = { username, email, _id };
 

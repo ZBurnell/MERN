@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../../utils/mutations';
+import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const LoginForm = () => {
@@ -28,17 +28,13 @@ const LoginForm = () => {
     }
 
     try {
-      const { data } = loginUser({
+      const { data } = await loginUser({
         variables: { ...userFormData },
       });
 
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      } Auth.login
-      (data.login.token);
-    } catch (err) {
-      console.error(err);
-      setShowAlert(true);
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
     }
 
     setUserFormData({
