@@ -1,7 +1,7 @@
 {
   "name": "googlebooks-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website that lets you search and add books to a list so you always know what to read next",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -10,12 +10,12 @@
     "build": "cd client && npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "ZBurnell",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.0"
   },
-  "dependencies": {
+"dependencies": {
     
   }
 }
