@@ -33,6 +33,11 @@ Below are the screenshots of the website site in action
 
 # Technologies
 
+MongoDB
+Express
+React
+Node
+Vite
 
 # Usage
 
